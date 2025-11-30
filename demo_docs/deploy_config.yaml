@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  namespace: production
+  labels:
+    app: user-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+      - name: user-service
+        image: registry.internal/user-service:v1.2.0
+        ports:
+        - containerPort: 8080
+        env:
+        - name: DB_HOST
+          value: "db-prod.internal"
+        - name: ENCRYPTION_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: aes-256-key
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"

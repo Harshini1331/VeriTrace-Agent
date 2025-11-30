@@ -1,0 +1,32 @@
+# Global Information Security Policy (GISP)
+**Document ID:** POL-SEC-2024-001
+**Version:** 4.2
+**Effective Date:** 2024-01-15
+**Classification:** INTERNAL
+
+## 1. Purpose
+This policy establishes the minimum security requirements for protecting [Company Name] data and information systems.
+
+## 2. Data Retention & Disposal
+**Rule 2.1:** Customer data backups must be retained for a minimum of 90 days to ensure business continuity and disaster recovery capabilities.
+**Rule 2.2:** User account data must be permanently purged from all active and backup systems within 90 days of account closure or termination of service.
+**Rule 2.3:** Deleted data must be rendered unrecoverable using industry-standard sanitization methods (e.g., NIST 800-88) after the retention period expires.
+
+## 3. Cryptography
+**Rule 3.1:** All Personally Identifiable Information (PII) must be encrypted at rest using strong encryption algorithms (AES-256 or equivalent).
+**Rule 3.2:** All data in transit over public networks must be encrypted using TLS 1.2 or higher. Weak ciphers (e.g., RC4, 3DES) are prohibited.
+
+## 4. Access Control & Authentication
+**Rule 4.1:** The user creation API and all administrative interfaces must be authenticated using multi-factor authentication (MFA) or strong API keys with rotation policies.
+**Rule 4.2:** Access to PII is restricted to authorized personnel on a need-to-know basis.
+
+## 5. Logging & Monitoring
+**Rule 5.1:** Every access to PII (read, write, delete) must be logged to a central, immutable audit database (SIEM).
+**Rule 5.2:** Security logs must be retained for at least 1 year for forensic investigation purposes.
+
+## 6. Third-Party Risk Management
+**Rule 6.1:** All third-party vendors processing [Company Name] data must be documented in the Vendor Contract Database (VCD) and undergo an annual security assessment.
+**Rule 6.2:** Explicit user consent must be obtained before sharing any PII with third-party processors, except where required by law.
+
+## 7. Development Security
+**Rule 7.1:** PII must be masked or synthesized in all non-production environments (Development, Testing, Staging). Real customer data is strictly prohibited in these environments.

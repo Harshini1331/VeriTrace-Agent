@@ -1,0 +1,13 @@
+DATA PROCESSING ADDENDUM (DPA)
+
+This Addendum is entered into by and between [Company Name] ("Controller") and [Partner Name] ("Processor").
+
+1. DATA PROTECTION
+1.1. The Processor agrees to process Personal Data only on documented instructions from the Controller.
+1.2. The Processor shall implement appropriate technical and organizational measures to protect the security, confidentiality, and integrity of Personal Data.
+
+2. SUB-PROCESSORS
+2.1. The Processor shall not engage any sub-processor without prior written authorization from the Controller.
+
+3. AUDIT RIGHTS
+3.1. The Controller has the right to audit the Processor's compliance with this Addendum at least once annually.

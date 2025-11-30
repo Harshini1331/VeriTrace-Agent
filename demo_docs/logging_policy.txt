@@ -1,0 +1,20 @@
+# STD-SEC-LOG-01: Centralized Logging Standard
+
+## 1. Scope
+This standard applies to all production servers, applications, and network devices.
+
+## 2. Requirements
+- **Centralization:** All logs must be forwarded to the central Splunk instance (splunk-prod.internal:9997).
+- **Format:** Logs must be structured in JSON format where possible.
+- **Content:**
+    - Authentication events (success/failure)
+    - Authorization checks
+    - Data access (PII read/write)
+    - System errors and exceptions
+
+## 3. Retention
+- **Hot Storage:** 30 days (for immediate search).
+- **Cold Storage:** 1 year (for compliance and auditing).
+
+## 4. Access Control
+Access to the logging platform is restricted to the Security Operations Center (SOC) and authorized DevOps leads.

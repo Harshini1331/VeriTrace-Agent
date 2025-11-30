@@ -1,0 +1,14 @@
+From: Sarah Jenkins (CTO)
+To: Mark Davis (Security Lead)
+Subject: Re: Encryption at Rest Migration Status
+
+Hi Mark,
+
+I wanted to check in on the AES-256 migration for the legacy user database. I know we are 100% compliant on the new microservices, but the old monolith is still using the legacy DES keys, right?
+
+I recall we have a waiver for this until Q3, but the auditors might flag it. Can we argue that since the disk itself is encrypted by AWS, we are "technically" compliant even if the DB engine isn't doing the encryption?
+
+Let me know your thoughts. We need to have a story for this.
+
+Best,
+Sarah
