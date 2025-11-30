@@ -22,7 +22,7 @@ The system consists of four specialized agents:
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/veritrace-agent.git
+    git clone https://github.com/Harshini1331/VeriTrace-Agent
     cd veritrace-agent
     ```
 
